@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".DashboardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Verify GPT"
+            android:textColor="@color/black"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Enter Mandatory Keywords"
+            android:textColor="@color/black"
+            android:textSize="13dp" />
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_marginTop="10dp"
+          android:orientation="horizontal"
+          android:weightSum="5"
+          android:layout_height="wrap_content"
+          >
+          <EditText
+              android:id="@+id/edt_search"
+              android:layout_width="250dp"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg"
+              android:hint="Add tags..."
+              android:layout_weight="3"
+              android:inputType="text"
+              android:maxLines="1"
+              android:padding="9dp"
+              android:textColor="@color/black" />
+
+          <androidx.appcompat.widget.AppCompatButton
+              android:id="@+id/btn_add"
+              android:layout_width="40dp"
+              android:layout_marginTop="3dp"
+              android:layout_height="40dp"
+              android:layout_marginStart="5dp"
+              android:background="@drawable/btn_bg_black"
+              android:text="+"
+              android:textSize="30dp"
+              android:textAllCaps="false"
+              android:layout_weight="2"
+              android:textColor="@color/white" />
+      </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                app:singleLine="true" />
+        </HorizontalScrollView>
+
+<!--      Preferred Keys-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Enter Preferred Keywords"
+            android:textColor="@color/black"
+            android:textSize="13dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:layout_height="wrap_content"
+            >
+            <EditText
+                android:id="@+id/edt_preferredKeywords"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg"
+                android:hint="Add tags..."
+                android:layout_weight="3"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="9dp"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_add_preferred"
+                android:layout_width="40dp"
+                android:layout_marginTop="3dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/btn_bg_black"
+                android:text="+"
+                android:textSize="30dp"
+                android:textAllCaps="false"
+                android:layout_weight="2"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/scrollView_preferred"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup_preferred"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                app:singleLine="true" />
+        </HorizontalScrollView>
+
+
+<!--        Not Included-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Enter Not included Keywords"
+            android:textColor="@color/black"
+            android:textSize="13dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:layout_height="wrap_content"
+            >
+            <EditText
+                android:id="@+id/edt_notIncludedKeywords"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg"
+                android:hint="Add tags..."
+                android:layout_weight="3"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="9dp"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_add_notIncluded"
+                android:layout_width="40dp"
+                android:layout_marginTop="3dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/btn_bg_black"
+                android:text="+"
+                android:textSize="30dp"
+                android:textAllCaps="false"
+                android:layout_weight="2"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Leave a space between two keywords"
+            android:textColor="@color/black"
+            android:textSize="13dp" />
+
+        <HorizontalScrollView
+            android:id="@+id/scrollView_notIncluded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup_notIncluded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                app:singleLine="true" />
+        </HorizontalScrollView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Enter Question:"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/edt_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg"
+            android:hint="Add tags..."
+            android:layout_weight="3"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="9dp"
+            android:textColor="@color/black" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Enter Description:"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+
+
+            <ImageView
+                android:id="@+id/btnClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clear"
+                android:padding="10dp"
+                android:layout_toLeftOf="@id/btnPaste"
+                android:layout_marginStart="2dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="2dp"
+                android:layout_marginTop="3dp" />
+
+
+            <ImageView
+                android:id="@+id/btnPaste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/paste"
+                android:padding="10dp"
+                android:layout_marginStart="2dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="10dp" />
+        </RelativeLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <EditText
+                   android:id="@+id/edt_description"
+                   android:layout_width="match_parent"
+                   android:layout_height="200dp"
+                   android:layout_marginTop="10dp"
+                   android:maxLines="500"
+                   android:background="@drawable/bg"
+                   android:gravity="top|start"
+                   android:hint="Enter Keywords"
+                   android:inputType="textMultiLine"
+                   android:padding="10dp"
+                   android:textColor="@color/black" />
+           </LinearLayout>
+            </ScrollView>
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+
+<!--            <EditText-->
+<!--                android:id="@+id/edt_description"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@drawable/bg"-->
+<!--                android:gravity="top|start"-->
+<!--                android:hint="Enter Keywords"-->
+<!--                android:inputType="textMultiLine"-->
+<!--                android:padding="10dp"-->
+<!--                android:textColor="@color/black" />-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:background="#E6E6E6">-->
+
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btnPaste"-->
+<!--                    android:layout_width="100dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_margin="20dp"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginEnd="20dp"-->
+<!--                    android:layout_marginBottom="20dp"-->
+<!--                    android:background="@drawable/btn_bg"-->
+<!--                    android:text="Paste"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="10sp" />-->
+<!--            </LinearLayout>-->
+<!--        </RelativeLayout>-->
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_bg_black"
+            android:text="Verify"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_bg_black"
+            android:text="Save Record"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Generated Reports"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:id="@+id/tv_visitReport"/>
+    </LinearLayout>
+</ScrollView>

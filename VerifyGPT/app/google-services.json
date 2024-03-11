@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "514725507464",
+    "project_id": "verifygpt",
+    "storage_bucket": "verifygpt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514725507464:android:a4a7f3eed34433fde98a3d",
+        "android_client_info": {
+          "package_name": "com.developer.verifygpt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq5w3otJFFrEIAXR9P9d5BecRQzi-dfow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
